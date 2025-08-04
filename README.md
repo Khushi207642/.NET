@@ -311,3 +311,187 @@ namespace P11
 }
 
  <img width="335" height="74" alt="image" src="https://github.com/user-attachments/assets/bc7d44b3-3616-4ac8-afcf-518f77345fa2" />
+
+
+
+PRACTICAL 2
+
+2.1
+
+USING FOR LOOP
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Practical_2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int num, fact = 1;
+            Console.Write("Enter a Number");
+            num = Convert.ToInt32(Console.ReadLine());
+            for (int i = 1; i <= num; i++)
+                fact *= i;
+            Console.WriteLine("Factorial using loop = " + fact);
+        }
+    }
+}
+
+ <img width="367" height="69" alt="Screenshot 2025-08-04 040808" src="https://github.com/user-attachments/assets/7d382e62-bfdb-4d67-b0c8-2da84666ebd1" />
+
+
+
+USING WHILE LOOP
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Practical_2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int num, fact = 1,i=1;
+            Console.Write("Enter a Number");
+            num = Convert.ToInt32(Console.ReadLine());
+            while (i <= num)
+            {
+                fact *= i;
+                i++;
+            }
+            Console.WriteLine("Factorial using loop = " + fact);
+        }
+    }
+}
+ <img width="354" height="81" alt="image" src="https://github.com/user-attachments/assets/d7086753-1a45-47b2-8328-7258b3fbbb3a" />
+
+2.2
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace Practical_2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int num,i,count=0;
+            Console.WriteLine("Enter a Number");
+            num=Convert.ToInt32(Console.ReadLine());
+            if(num<=1)
+            {
+                Console.WriteLine("Not a prime number");
+                return;
+            }
+
+            for (i = 1; i <= num; i++)
+            {
+                if (num % i == 0)
+                {
+                    count++;
+                }
+
+            }
+
+            if (count == 2)
+            {
+                Console.WriteLine("Prime Numbers");
+            }
+            else
+            {
+                Console.WriteLine("Not a prime number");
+            }
+        }
+    }
+}
+
+ <img width="282" height="86" alt="image" src="https://github.com/user-attachments/assets/47103401-94df-4d1e-bc83-b15ecc52eb67" />
+
+2.3
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace Practical_2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int num, remainder,reverse=0;
+            Console.Write("Enter a number : ");
+            num=Convert.ToInt32(Console.ReadLine());
+            while(num!=0)
+            {
+                remainder = num % 10;
+                reverse = reverse * 10 + remainder;
+                num /= 10;
+            }
+            Console.Write("Reversed Number : " + reverse);
+        }
+    }
+}
+ <img width="320" height="65" alt="image" src="https://github.com/user-attachments/assets/682b0397-14ee-465d-94e3-080b27c38f65" />
+
+
+2.4
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace Practical_2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int original, num ,reverse=0,digit;
+            Console.Write("Enter a number : ");
+            original=Convert.ToInt32(Console.ReadLine());
+            num=original;
+            
+            while(num!=0)
+            {
+                digit = num % 10;
+                reverse = reverse * 10 + digit;
+                num/=10;    
+            }
+            Console.WriteLine("Reverse Number : " + reverse);
+
+            if (original == reverse)
+            {
+                Console.WriteLine("It is Palindrome");
+            }
+            else
+            {
+                Console.WriteLine("It is not palindrome");
+            }
+        }
+    }
+}
+
+ <img width="282" height="80" alt="image" src="https://github.com/user-attachments/assets/d5131cfe-7e36-46ad-afda-2df940bc12ea" />
+
+2.5

@@ -1,5 +1,6 @@
 # .NET
 Practical 1
+-1.1
 
 using System;
 using System.Collections.Generic;
@@ -23,7 +24,7 @@ namespace P1
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c0805b7a-0b5b-4a77-916f-120da343c0b4" />
 
-PRACTICAL 2
+~ 1.2
 
 using System;
 using System.Collections.Generic;
@@ -54,7 +55,7 @@ namespace p2
 
 <img width="1465" height="331" alt="Screenshot (27)" src="https://github.com/user-attachments/assets/e09c6a0f-50e9-43d3-ba56-cfb76d57c3ca" />
 
-PRACTICAL 3
+~ 1.3
 
 using System;
 using System.Collections.Generic;
@@ -78,7 +79,8 @@ namespace p3
 
  <img width="1450" height="190" alt="image" src="https://github.com/user-attachments/assets/d9b8e0dd-ef87-470c-878e-00a24db62ccf" />
 
-PRACTICAL 4
+~ 1.4
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -104,7 +106,8 @@ namespace p4
 }
  <img width="461" height="77" alt="image" src="https://github.com/user-attachments/assets/c0aa1a7a-4017-4840-b270-cd07d1ff8092" />
 
- PRACTICAL 5 
+~ 1.5
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -130,7 +133,8 @@ namespace P5
 }
   <img width="373" height="98" alt="image" src="https://github.com/user-attachments/assets/d0609091-8be3-4852-a29b-455b18245657" />
 
-PRACTICAL 6
+~ 1.6
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -163,7 +167,7 @@ namespace p6
 
  <img width="312" height="157" alt="image" src="https://github.com/user-attachments/assets/96e708df-a6a9-498f-82d8-8f8755d589b9" />
 
-PRACTICAL 7
+~ 1.7
 
 using System;
 using System.Collections.Generic;
@@ -196,7 +200,7 @@ namespace p7
 
  <img width="353" height="79" alt="image" src="https://github.com/user-attachments/assets/63f7f049-6b6b-4cc2-aa70-2c122c88c5be" />
 
-PRACTICAL 8
+~ 1.8
 
 using System;
 using System.Collections.Generic;
@@ -222,7 +226,7 @@ namespace p8
  <img width="361" height="77" alt="image" src="https://github.com/user-attachments/assets/cd5978ac-1067-4b0f-a248-034a426646dd" />
 
 
-PRACTICAL 9
+~ 1.9
 
 using System;
 using System.Collections.Generic;
@@ -251,7 +255,7 @@ namespace p9
  <img width="295" height="66" alt="image" src="https://github.com/user-attachments/assets/05b4eb51-194a-4b7d-8c6a-1d1206a13f96" />
 
 
-PRACTICAL 10 
+~ 1.10
 
 using System;
 using System.Collections.Generic;
@@ -279,7 +283,7 @@ namespace p10
  <img width="310" height="63" alt="image" src="https://github.com/user-attachments/assets/16d5519e-e540-4ce9-871c-2cf7166f7840" />
 
 
-PRACTICAL 11
+~ 1.11
 
 using System;
 using System.Collections.Generic;
@@ -316,7 +320,7 @@ namespace P11
 
 PRACTICAL 2
 
-2.1
+~ 2.1
 
 USING FOR LOOP
 
@@ -374,7 +378,7 @@ namespace Practical_2
 }
  <img width="354" height="81" alt="image" src="https://github.com/user-attachments/assets/d7086753-1a45-47b2-8328-7258b3fbbb3a" />
 
-2.2
+~ 2.2
 
 using System;
 using System.Collections.Generic;
@@ -421,7 +425,7 @@ namespace Practical_2
 
  <img width="282" height="86" alt="image" src="https://github.com/user-attachments/assets/47103401-94df-4d1e-bc83-b15ecc52eb67" />
 
-2.3
+~ 2.3
 
 using System;
 using System.Collections.Generic;
@@ -452,7 +456,7 @@ namespace Practical_2
  <img width="320" height="65" alt="image" src="https://github.com/user-attachments/assets/682b0397-14ee-465d-94e3-080b27c38f65" />
 
 
-2.4
+~ 2.4
 
 using System;
 using System.Collections.Generic;
@@ -494,4 +498,92 @@ namespace Practical_2
 
  <img width="282" height="80" alt="image" src="https://github.com/user-attachments/assets/d5131cfe-7e36-46ad-afda-2df940bc12ea" />
 
-2.5
+~ 2.5
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace Practical_2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int num, sum = 0, digit;
+
+            Console.Write("Enter a Number : ");
+            num=Convert.ToInt32(Console.ReadLine());
+
+            while (num != 0)
+            {
+                digit = num % 10;
+                sum += digit;
+                num /= 10;
+            }
+            Console.WriteLine("Sum of Digit : " + sum);
+        }
+    }
+}
+
+ <img width="281" height="57" alt="image" src="https://github.com/user-attachments/assets/06269075-313a-4cd3-bf2f-2940cd216f27" />
+
+~ 2.6
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace Practical_2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int subject1, subject2, subject3;
+            int total;
+            double average;
+
+            Console.Write("Enter marks for Subject 1: ");
+            subject1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Enter marks for Subject 2: ");
+            subject2 = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Enter marks for Subject 3: ");
+            subject3 = Convert.ToInt32(Console.ReadLine());
+
+            total = subject1 + subject2 + subject3;
+            average = total / 3.0;
+
+            Console.WriteLine("\nTotal Marks: " + total);
+            Console.WriteLine("Average Marks: " + average);
+
+            if (average >= 80)
+            {
+                Console.WriteLine("Grade: A");
+            }
+            else if (average >= 60)
+            {
+                Console.WriteLine("Grade: B");
+            }
+            else if (average >= 40)
+            {
+                Console.WriteLine("Grade: C");
+            }
+            else
+            {
+                Console.WriteLine("Grade: F");
+            }
+
+        }
+    }
+}
+
+ <img width="568" height="207" alt="image" src="https://github.com/user-attachments/assets/c55d258f-de75-4dc0-b29e-4a79b7096dfa" />

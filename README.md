@@ -587,3 +587,149 @@ namespace Practical_2
 }
 
  <img width="568" height="207" alt="image" src="https://github.com/user-attachments/assets/c55d258f-de75-4dc0-b29e-4a79b7096dfa" />
+
+
+Practical 3
+
+~ 3.1
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string name = "Khushi";
+            Console.WriteLine("Name : "+name);
+            string sub = name.Substring(0, 2);
+            Console.WriteLine("First three characters : " + sub);
+        }
+    }
+}
+
+ <img width="448" height="75" alt="image" src="https://github.com/user-attachments/assets/6cec1741-4d8d-456b-926d-0cd9c6978b49" />
+
+~(for own purpose)
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string name = "Khushi panchal";
+            Console.WriteLine("real : "+name);
+            string newstr = name.Replace("Khushi", "Khush");
+            Console.WriteLine("New replace is : "+newstr);
+        }
+    }
+}
+
+
+  <img width="436" height="65" alt="image" src="https://github.com/user-attachments/assets/04cabd33-aa11-4365-8000-c92cb3fa137c" />
+
+~3.2
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter a sentence : ");
+            string sen=Console.ReadLine();
+
+
+            Console.WriteLine("Enter a word to replace : ");
+            string old = Console.ReadLine();
+
+            Console.WriteLine("Enter a new word : ");
+            string newword= Console.ReadLine();
+
+            string replaced=sen.Replace(old, newword);
+            Console.WriteLine("Modify sentence : " + replaced);
+        }
+    }
+}
+
+ <img width="413" height="194" alt="image" src="https://github.com/user-attachments/assets/b98c9d7d-1eda-4be6-9941-cc9b5c603d60" />
+
+~3.3
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter a sentence : ");
+            string sen = Console.ReadLine();
+            string[] word = sen.Split(' ');
+            Console.WriteLine("Words to be : ");
+            for(int i=0; i<word.Length; i++)
+            {
+                if(word[i]!="")
+                {
+                    Console.WriteLine(word[i]);
+                }
+            }
+
+
+        }
+    }
+}
+
+  <img width="298" height="143" alt="image" src="https://github.com/user-attachments/assets/a20e730a-1ceb-4e80-85c0-981d7aa40e4a" />
+
+
+  ~3.4
+
+  using System;
+using System.Text;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter a sentence: ");
+            string sentence = Console.ReadLine();
+
+            StringBuilder st = new StringBuilder(sentence);
+
+            Console.Write("Enter a string to append: ");
+            string appendText = Console.ReadLine();
+
+            st.Append(" " + appendText);
+
+           
+            Console.WriteLine("\nUpdated String: " + st.ToString());
+        }
+    }
+}
+
+ <img width="434" height="114" alt="image" src="https://github.com/user-attachments/assets/589b7c70-823f-4177-831c-b24dfb54028d" />
+

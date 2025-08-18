@@ -733,3 +733,38 @@ namespace ConsoleApp1
 
  <img width="434" height="114" alt="image" src="https://github.com/user-attachments/assets/589b7c70-823f-4177-831c-b24dfb54028d" />
 
+
+
+~3.5
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace p23
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter a sentence : ");
+            string sen = Console.ReadLine();
+
+            StringBuilder sb = new StringBuilder(sen);
+            Console.Write("Enter what to do : ");
+
+            string extra = Console.ReadLine();
+            Console.Write("Enter position number :");
+
+            int pos = int.Parse(Console.ReadLine());
+            sb.Insert(pos, extra);
+            Console.WriteLine("After insertion : " + sb.ToString());
+        }
+    }
+}
+
+
+ <img width="467" height="129" alt="image" src="https://github.com/user-attachments/assets/41537831-e445-4b7c-8478-9451c053bf8d" />
+

@@ -589,6 +589,8 @@ namespace Practical_2
  <img width="568" height="207" alt="image" src="https://github.com/user-attachments/assets/c55d258f-de75-4dc0-b29e-4a79b7096dfa" />
 
 
+
+
 Practical 3
 
 ~ 3.1

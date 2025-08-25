@@ -862,3 +862,298 @@ class Program
 
  <img width="568" height="705" alt="image" src="https://github.com/user-attachments/assets/e51985b6-cf90-457a-a7ca-f12f36238b9c" />
   <img width="658" height="335" alt="image" src="https://github.com/user-attachments/assets/c673e2ab-05fa-4a1d-b2d8-a8ac9eb7001d" />
+
+~4.3
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+struct Employee
+{
+    public int ID;
+    public string Name;
+    public double Salary;
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.Write("Enter number of employees: ");
+        int n = int.Parse(Console.ReadLine());
+
+        Employee[] employees = new Employee[n];
+
+        // Input details
+        for (int i = 0; i < n; i++)
+        {
+            Console.WriteLine($"\nEnter details of Employee {i + 1}:");
+
+            Console.Write("Enter ID: ");
+            employees[i].ID = int.Parse(Console.ReadLine());
+
+            Console.Write("Enter Name: ");
+            employees[i].Name = Console.ReadLine();
+
+            Console.Write("Enter Salary: ");
+            employees[i].Salary = double.Parse(Console.ReadLine());
+        }
+
+        // Display details
+        Console.WriteLine("\n--- Employee Details ---");
+        for (int i = 0; i < n; i++)
+        {
+            Console.WriteLine($"\nEmployee {i + 1}:");
+            Console.WriteLine($"ID: {employees[i].ID}");
+            Console.WriteLine($"Name: {employees[i].Name}");
+            Console.WriteLine($"Salary: {employees[i].Salary}");
+        }
+    }
+}
+
+ <img width="422" height="546" alt="image" src="https://github.com/user-attachments/assets/1a3ea171-5c3a-483c-9b55-e75acad784b9" />
+
+~4.4
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+struct Employee
+{
+    public int ID;
+    public string Name;
+    public double Salary;
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.Write("Enter number of employees: ");
+        int n = int.Parse(Console.ReadLine());
+
+        Employee[] employees = new Employee[n];
+
+        // Input details
+        for (int i = 0; i < n; i++)
+        {
+            Console.WriteLine($"\nEnter details of Employee {i + 1}:");
+
+            Console.Write("Enter ID: ");
+            employees[i].ID = int.Parse(Console.ReadLine());
+
+            Console.Write("Enter Name: ");
+            employees[i].Name = Console.ReadLine();
+
+            Console.Write("Enter Salary: ");
+            employees[i].Salary = double.Parse(Console.ReadLine());
+        }
+
+        // Display employees with salary > 50000
+        Console.WriteLine("\n--- Employees with Salary > 50000 ---");
+        bool found = false;
+        for (int i = 0; i < n; i++)
+        {
+            if (employees[i].Salary > 50000)
+            {
+                found = true;
+                Console.WriteLine($"\nEmployee {i + 1}:");
+                Console.WriteLine($"ID: {employees[i].ID}");
+                Console.WriteLine($"Name: {employees[i].Name}");
+                Console.WriteLine($"Salary: {employees[i].Salary}");
+            }
+        }
+
+        if (!found)
+        {
+            Console.WriteLine("\nNo employees found with salary greater than 50000.");
+        }
+    }
+}
+
+ <img width="546" height="426" alt="image" src="https://github.com/user-attachments/assets/e9a5d213-1f09-4e7f-aa0e-113b3209a786" />
+
+~4.5
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+
+struct Employee
+{
+    public int ID;
+    public string Name;
+    public double Salary;
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.Write("Enter number of employees: ");
+        int n = int.Parse(Console.ReadLine());
+
+        Employee[] employees = new Employee[n];
+
+        // Input details
+        for (int i = 0; i < n; i++)
+        {
+            Console.WriteLine($"\nEnter details of Employee {i + 1}:");
+
+            Console.Write("Enter ID: ");
+            employees[i].ID = int.Parse(Console.ReadLine());
+
+            Console.Write("Enter Name: ");
+            employees[i].Name = Console.ReadLine();
+
+            Console.Write("Enter Salary: ");
+            employees[i].Salary = double.Parse(Console.ReadLine());
+        }
+
+        // Search employee by ID
+        Console.Write("\nEnter the Employee ID to search: ");
+        int searchID = int.Parse(Console.ReadLine());
+        bool found = false;
+
+        for (int i = 0; i < n; i++)
+        {
+            if (employees[i].ID == searchID)
+            {
+                found = true;
+                Console.WriteLine("\n--- Employee Found ---");
+                Console.WriteLine($"ID: {employees[i].ID}");
+                Console.WriteLine($"Name: {employees[i].Name}");
+                Console.WriteLine($"Salary: {employees[i].Salary}");
+                break; // Exit loop after finding the employee
+            }
+        }
+
+        if (!found)
+        {
+            Console.WriteLine("\nEmployee with the given ID was not found.");
+        }
+    }
+}
+
+ <img width="548" height="435" alt="image" src="https://github.com/user-attachments/assets/94ff289a-190d-4e65-9111-da70e9769bc9" />
+
+~4.6
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+
+struct Employee
+{
+    public int ID;
+    public string Name;
+    public double Salary;
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        int[] numbers = { 45, 12, 78, 34, 89, 23, 56, 91, 5, 67 };
+
+        int largest = numbers[0];
+        int smallest = numbers[0];
+
+        for (int i = 1; i < numbers.Length; i++)
+        {
+            if (numbers[i] > largest)
+                largest = numbers[i];
+
+            if (numbers[i] < smallest)
+                smallest = numbers[i];
+        }
+
+        Console.WriteLine("Numbers: " + string.Join(", ", numbers));
+        Console.WriteLine($"\nLargest number: {largest}");
+        Console.WriteLine($"Smallest number: {smallest}");
+
+    }
+}
+
+ <img width="663" height="117" alt="image" src="https://github.com/user-attachments/assets/9e5f21db-0b49-4d63-b726-57882241ee8f" />
+
+~4.6
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+
+struct Student
+{
+    public int RollNo;
+    public string Name;
+    public int[] Marks; // For 3 subjects
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.Write("Enter number of students: ");
+        int n = int.Parse(Console.ReadLine());
+
+        Student[] students = new Student[n];
+
+        // Input student details
+        for (int i = 0; i < n; i++)
+        {
+            Console.WriteLine($"\nEnter details for Student {i + 1}:");
+
+            Console.Write("Enter Roll No: ");
+            students[i].RollNo = int.Parse(Console.ReadLine());
+
+            Console.Write("Enter Name: ");
+            students[i].Name = Console.ReadLine();
+
+            students[i].Marks = new int[3];
+            for (int j = 0; j < 3; j++)
+            {
+                Console.Write($"Enter marks for Subject {j + 1}: ");
+                students[i].Marks[j] = int.Parse(Console.ReadLine());
+            }
+        }
+
+        // Display student details with total and average
+        Console.WriteLine("\n--- Student Details ---");
+        for (int i = 0; i < n; i++)
+        {
+            int total = 0;
+            for (int j = 0; j < 3; j++)
+            {
+                total += students[i].Marks[j];
+            }
+            double average = total / 3.0;
+
+            Console.WriteLine($"\nRoll No: {students[i].RollNo}");
+            Console.WriteLine($"Name: {students[i].Name}");
+            Console.WriteLine($"Marks: {string.Join(", ", students[i].Marks)}");
+            Console.WriteLine($"Total Marks: {total}");
+            Console.WriteLine($"Average Marks: {average:F2}");
+        }
+    }
+}
+
+ <img width="556" height="695" alt="image" src="https://github.com/user-attachments/assets/0e8f33cd-f438-42a0-a6fb-cfa5756f0d47" />

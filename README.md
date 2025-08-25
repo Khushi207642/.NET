@@ -770,3 +770,95 @@ namespace p23
 
  <img width="467" height="129" alt="image" src="https://github.com/user-attachments/assets/41537831-e445-4b7c-8478-9451c053bf8d" />
 
+Practical 4
+
+~4.1
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] intarray;
+            intarray = new int[5];
+            intarray[0] = 10;
+            intarray[1] = 20;
+            intarray[2] = 30;
+            intarray[3] = 40;
+            intarray[4] = 50;
+            int Length=intarray.Length;
+            for (int i = 0; i < intarray.Length; i++)
+            {
+                Console.WriteLine("" + intarray[i]);
+            }
+        }
+    }
+}
+
+ <img width="355" height="148" alt="image" src="https://github.com/user-attachments/assets/c67cb89a-c5c7-4b23-a1ad-b4936f8fb8df" />
+
+~4.2
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+struct Book
+{
+    public int BookID;
+    public string Title;
+    public string Author;
+    public double Price;
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Create array of 3 books
+        Book[] books = new Book[3];
+
+        // Taking input for 3 books
+        for (int i = 0; i < 3; i++)
+        {
+            Console.WriteLine($"\nEnter details of Book {i + 1}:");
+
+            Console.Write("Enter Book ID: ");
+            books[i].BookID = int.Parse(Console.ReadLine());
+
+            Console.Write("Enter Title: ");
+            books[i].Title = Console.ReadLine();
+
+            Console.Write("Enter Author: ");
+            books[i].Author = Console.ReadLine();
+
+            Console.Write("Enter Price: ");
+            books[i].Price = double.Parse(Console.ReadLine());
+        }
+
+        // Display book details
+        Console.WriteLine("\n--- Book Details ---");
+        for (int i = 0; i < 3; i++)
+        {
+            Console.WriteLine($"\nBook {i + 1}:");
+            Console.WriteLine($"ID: {books[i].BookID}");
+            Console.WriteLine($"Title: {books[i].Title}");
+            Console.WriteLine($"Author: {books[i].Author}");
+            Console.WriteLine($"Price: {books[i].Price}");
+        }
+    }
+}
+
+
+ <img width="568" height="705" alt="image" src="https://github.com/user-attachments/assets/e51985b6-cf90-457a-a7ca-f12f36238b9c" />
+  <img width="658" height="335" alt="image" src="https://github.com/user-attachments/assets/c673e2ab-05fa-4a1d-b2d8-a8ac9eb7001d" />
